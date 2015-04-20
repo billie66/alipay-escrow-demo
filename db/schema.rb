@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420095641) do
+ActiveRecord::Schema.define(version: 20150420151027) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
     t.float    "price",      limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover"
   end
 
   create_table "orders", force: true do |t|

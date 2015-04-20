@@ -1,27 +1,18 @@
-<h1>Listing courses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.name %></td>
-        <td><%= course.price %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% content_for :head do  %>
+  全部课程
+<% end %>
+<% @courses.each do |course| %>
+  <div class="course">
+    <%= link_to course, class: "cover" do%>
+      <%= image_tag course.cover %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+    <p class="title"><%= course.name %></p>
+    <ul class="action">
+      <li><%= link_to 'Edit', edit_course_path(course) %></li>
+      <li><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?'} %></li>
+    </ul>
+    <p class="price"><%= course.price %></p>
+  </div>
+<% end %>
 
 <%= link_to 'New Course', new_course_path %>
