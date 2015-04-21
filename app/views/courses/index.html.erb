@@ -1,6 +1,7 @@
 <% content_for :head do  %>
   全部课程
 <% end %>
+<div class="courses clearfix">
 <% @courses.each do |course| %>
   <div class="course">
     <%= link_to course, class: "cover" do%>
@@ -8,11 +9,17 @@
     <% end %>
     <p class="title"><%= course.name %></p>
     <ul class="action">
-      <li><%= link_to 'Edit', edit_course_path(course) %></li>
-      <li><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?'} %></li>
+      <li class="date"><%= course.updated_at.strftime('%F') %>更新</li>
+      <li class="price">
+        <% if course.price > 0 %>
+          <%= course.price %>元
+        <% else %>
+          免费
+        <% end %>
+      </li>
     </ul>
-    <p class="price"><%= course.price %></p>
   </div>
 <% end %>
+</div>
 
-<%= link_to 'New Course', new_course_path %>
+<div class="new-course"><%= link_to '新建课程', new_course_path%></div>

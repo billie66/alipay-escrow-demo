@@ -23,6 +23,9 @@ body, ul, h3, h4, p {
 ul {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+}
 body {
   min-width: 1000px;
 }

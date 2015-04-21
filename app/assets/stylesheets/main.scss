@@ -1,0 +1,84 @@
+.courses {
+  margin: 0 -15px;
+}
+.course {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  width: 300px;
+  height: 100%;
+  margin: 15px;
+  float: left;
+  box-shadow:
+  a, img {
+    display: block;
+  }
+  img {
+    width: 100%;
+    border-bottom: 3px solid teal;
+  }
+  .title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  .action li {
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: #555;
+  }
+  .price {
+    float: right;
+    padding-right: 10px;
+  }
+}
+.new-course {
+  background-color: #33A646;
+  padding: 10px;
+  width: 150px;
+  margin-top: 50px;
+  text-align: center;
+  a {
+    color: #FFF;
+    font-size: 20px;
+  }
+}
+.course-show {
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  -moz-box-shadow: 0 0 30px #ccc;
+  -webkit-box-shadow: 0 0 30px #ccc;
+  box-shadow: 0 0 30px #ccc;
+  padding: 30px 50px;
+  .cover {
+    float: left;
+    text-align: center;
+    img {
+      display: block;
+      margin-bottom: 10px;
+    }
+    a {
+      display: inline-block;
+      padding: 10px;
+      color: teal;
+    }
+    a.danger {
+      color: #d26911;
+    }
+  }
+  .buy-course {
+    background-color: #33A646;
+    width: 180px;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+    float: left;
+    margin-left: 100px;
+    a {
+      color: #FFF;
+    }
+  }
+}
