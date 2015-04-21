@@ -1,6 +1,9 @@
-<h1>Editing course</h1>
+<% content_for :head do %>
+  编辑课程
+<% end %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @course %> |
-<%= link_to 'Back', courses_path %>
+<div class="edit-course-form">
+  <%= render 'form' %>
+  <%= link_to 'Show', @course %> |
+  <%= link_to 'Back', courses_path %>
+</div>
