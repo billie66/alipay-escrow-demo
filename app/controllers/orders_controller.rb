@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   def new
     @course = Course.find(params[:course_id]) if params[:course_id].present?
     @order = Order.new
-    @trade_no = Time.now.to_i.to_s
+    @out_trade_no = Time.now.to_i.to_s
   end
 
   def create
@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:course_id, :trade_no, :trade_status, :subject, :total_fee)
+    params.require(:order).permit(:course_id, :out_trade_no, :trade_status, :subject, :total_fee)
   end
 
   def update_order
@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
       :logistics_name => 'course',
       :transport_type => 'DIRECT'
     }
-    @order = Order.find_by_trade_no(params[:out_trade_no])
+    @order = Order.find_by_out_trade_no(params[:out_trade_no])
     notify_params = params.except(*request.path_parameters.keys)
 
     if (@order.trade_status != "finished") && Alipay::Notify.verify?(notify_params)

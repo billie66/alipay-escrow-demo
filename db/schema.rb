@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420151027) do
+ActiveRecord::Schema.define(version: 20150422034007) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150420151027) do
 
   create_table "orders", force: true do |t|
     t.integer  "course_id"
-    t.string   "trade_no"
+    t.string   "out_trade_no"
     t.string   "trade_status"
     t.string   "subject"
     t.float    "total_fee",    limit: 24

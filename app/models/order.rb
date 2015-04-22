@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   def pay_url
     Alipay::Service.create_partner_trade_by_buyer_url({
-      out_trade_no:      trade_no,
+      out_trade_no:      out_trade_no,
       subject:           subject,
       price:             total_fee,
       quantity:          1,
