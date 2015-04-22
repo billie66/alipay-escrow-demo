@@ -8,6 +8,10 @@
     <%= link_to '首页', courses_path %>
   </div>
   <div class="buy-course">
-    <%= link_to "购买课程 #{@course.price} 元", new_order_path(course_id: @course.id) %>
+    <% if not @course.paid? %>
+      <%= link_to "购买课程 #{@course.price} 元", new_order_path(course_id: @course.id) %>
+    <% else %>
+      <%= link_to "下载课程", "javascript:;" %>
+    <% end %>
   </div>
 </div>

@@ -18,6 +18,7 @@
   <%= f.hidden_field :course_id, value: course.id %>
   <%= f.hidden_field :subject, value: course.name %>
   <%= f.hidden_field :trade_no, value: trade_no %>
+  <%= f.hidden_field :total_fee, value: course.price * 1 %>
 <div class="action">
   <%= f.submit "提交订单", class: "order-button" %>
 </div>
