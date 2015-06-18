@@ -1,4 +1,4 @@
-class Course < ActiveRecord::Base
+class Cup < ActiveRecord::Base
  has_many :orders
 
  def paid?

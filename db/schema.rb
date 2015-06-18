@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422034007) do
+ActiveRecord::Schema.define(version: 20150618013210) do
 
-  create_table "courses", force: true do |t|
+  create_table "cups", force: true do |t|
     t.string   "name"
     t.float    "price",      limit: 24
     t.datetime "created_at"
