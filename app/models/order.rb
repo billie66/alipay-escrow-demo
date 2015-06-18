@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  belongs_to :course
+  belongs_to :cup
 
   def pay_url
     Alipay::Service.create_partner_trade_by_buyer_url({
@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
       receive_address:   'none',
       receive_zip:       '100000',
       receive_mobile:    '100000000000',
-      return_url:        'http://hc.dev:3000/orders/done',
+      return_url:        'http://local.dev:3000/orders/done',
       # notify_url:        'http://hc.dev:3000/orders/alipay_notify'
     })
   end

@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
     if @order.trade_status == "finished"
       flash[:notice] = "恭喜你，付款成功了！"
     end
-    redirect_to course_path(@order.course)
+    redirect_to :root
   end
 
   def alipay_notify
