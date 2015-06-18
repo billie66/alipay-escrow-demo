@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :update_order, only: [ :done, :alipay_notify]
 
   def new
-    @course = Course.find(params[:course_id]) if params[:course_id].present?
+    @cup = Cup.find(params[:cup_id]) if params[:cup_id].present?
     @order = Order.new
     @out_trade_no = Time.now.to_i.to_s
   end

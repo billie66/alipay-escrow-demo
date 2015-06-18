@@ -6,7 +6,7 @@
   <div class="item">
     <%= image_tag cup.cover , class: "cover" %>
     <p class="title"><%= cup.name %>（<%= cup.price %>元）</p>
-    <a href="#" class="buy-btn">
+    <a href="orders/new?cup_id=<%= cup.id %>" class="buy-btn">
       购买
     </a>
   </div>

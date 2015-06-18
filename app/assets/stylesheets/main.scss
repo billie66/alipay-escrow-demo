@@ -84,6 +84,9 @@ header {
 
 .new-order {
   text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(43,59,93,0.29);
   table {
     width: 100%;
     height: 100px;
@@ -102,15 +105,20 @@ header {
     }
   }
   .order-button {
-    background-color: #33A646;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #26a69a;
     width: 150px;
     padding: 10px;
     text-align: center;
     color: #FFF;
     border: none;
     font-size: 20px;
+    transition: all .3s ease-out;
+    border-radius: 3px;
     &:hover {
       cursor: pointer;
+      background-color: #2bbbad;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }
