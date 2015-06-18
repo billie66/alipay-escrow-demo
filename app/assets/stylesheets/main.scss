@@ -10,9 +10,10 @@
 .clearfix:after {
   clear: both;
 }
-html, body {
-  min-height: 100%;
-  background: #F0F0F0;
+
+
+body {
+  background-color: rgb(235, 239, 242);
   -webkit-font-smoothing: antialiased;
   font-family: sans-serif;
 }
@@ -36,7 +37,7 @@ header {
   color: #FFF;
   font-size: 25px;
   font-weight: 600;
-  background-color: teal;
+  background-color: rgb(77, 70, 180);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 .wrapper {
@@ -44,32 +45,21 @@ header {
   margin: 50px auto;
 }
 
-@mixin shadow {
-  border: 1px solid #ccc;
-  background-color: #FFF;
-  -moz-box-shadow: 0 0 30px #ccc;
-  -webkit-box-shadow: 0 0 30px #ccc;
-  box-shadow: 0 0 30px #ccc;
-  padding: 30px 50px;
+.items {
+  width: 660px;
+  margin: 0 auto;
 }
-
-.courses {
-  margin: 0 -15px;
-}
-.course {
-  border: 1px solid #ccc;
+.item {
+  box-shadow: 0 1px 2px rgba(43,59,93,0.29);
   background-color: #FFF;
   width: 300px;
-  height: 100%;
   margin: 15px;
   float: left;
-  box-shadow:
-  a, img {
+  border-radius: 5px;
+  .cover {
     display: block;
-  }
-  img {
-    width: 100%;
-    border-bottom: 3px solid teal;
+    width: 80%;
+    margin: 10px auto;
   }
   .title {
     text-align: center;
@@ -78,62 +68,21 @@ header {
     font-size: 18px;
     color: #333;
   }
-  .action li {
-    display: inline-block;
-    font-size: 14px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    color: #555;
-  }
-  .price {
-    float: right;
-    padding-right: 10px;
-  }
-}
-.new-course {
-  background-color: #33A646;
-  padding: 10px;
-  width: 150px;
-  margin-top: 50px;
-  text-align: center;
-  a {
-    color: #FFF;
-    font-size: 20px;
-  }
-}
-.course-show {
-  @include shadow;
-  .cover {
-    float: left;
+  .buy-btn {
+    display: block;
+    width: 100%;
+    line-height: 3;
     text-align: center;
-    img {
-      display: block;
-      margin-bottom: 10px;
-    }
-    a {
-      display: inline-block;
-      padding: 10px;
-      color: teal;
-    }
-    a.danger {
-      color: #d26911;
-    }
-  }
-  .buy-course {
-    background-color: #33A646;
-    width: 180px;
-    padding: 10px;
-    margin-top: 50px;
-    text-align: center;
-    float: left;
-    margin-left: 100px;
-    a {
-      color: #FFF;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(226, 30, 96);
+    &:hover {
+      background-color: rgb(243, 80, 135);
     }
   }
 }
+
 .new-order {
-  @include shadow;
   text-align: center;
   table {
     width: 100%;
