@@ -69,6 +69,7 @@ header {
     color: #333;
   }
   .buy-btn {
+    transition: all .3s ease-out;
     display: block;
     width: 100%;
     line-height: 3;
